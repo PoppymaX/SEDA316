@@ -1,4 +1,3 @@
-# Hecho en 4 dias por Luis y Gustavo
 import random
 
 
