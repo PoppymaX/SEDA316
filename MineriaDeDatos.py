@@ -1,6 +1,5 @@
 import random
 
-
 if __name__ == "__main__":
     char_length = 1000000
     palabra = "cona"
