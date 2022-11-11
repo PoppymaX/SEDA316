@@ -1,0 +1,35 @@
+# Hecho y corregido en PyCharm por Gustavo Alejandro Nunez Rosales
+
+import random
+import statistics
+
+replicas = 10
+lista = []
+media = float
+if __name__ == "__main__":
+
+    for i in range(replicas):
+
+        char_length = 1000000
+        probabilidad = (char_length) / 3
+        palabra = "ana"
+        abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
+               "v", "w", "x", "y", "z"]
+        output = []
+
+        for i in range(char_length):
+            selection = random.choice(abc)
+            output.append(selection)
+
+        output_2 = "".join(output)
+        # print(output_2)
+        output_3 = output_2.replace(palabra, "|")
+        quantity = output_3.count("|")
+        probabilidades = quantity / probabilidad
+        lista.append(probabilidades)
+        media = (statistics.median(lista))
+        print("Longitud de la seleccion aleatoria:", len(output))
+        print("Numero de veces que la palabra '{}' aparecio en la seleccion aleatoria: {}".format(palabra, quantity),
+              "probabilidad:", (probabilidades))
+
+print('Probabilidad total que la palabra aparezca:', (media))
